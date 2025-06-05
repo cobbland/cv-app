@@ -31,7 +31,7 @@ export default function Education({ saveAll }) {
             <div>
                 <div>
                     <h3>School</h3>
-                    <p>{school}</p>
+                    <p className="school">{school}</p>
                 </div>
                 <div>
                     <h3>Area</h3>

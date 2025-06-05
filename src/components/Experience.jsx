@@ -36,7 +36,7 @@ export default function Experience({ saveAll }) {
             <div>
                 <div>
                     <h3>Company</h3>
-                    <p>{company}</p>
+                    <p className="company">{company}</p>
                 </div>
                 <div>
                     <h3>Title</h3>

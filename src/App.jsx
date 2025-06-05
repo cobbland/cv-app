@@ -30,7 +30,7 @@ export default function App() {
         <General saveAll={saveAll} />
       </div>
       <div>
-        <h2>Bio</h2>
+        <h2 className='bio'>Bio</h2>
         <Bio  saveAll={saveAll} />
       </div>
       <div>
@@ -39,13 +39,17 @@ export default function App() {
       </div>
       <div>
         <h2>Experience</h2>
-        {experienceNum.map((num) => <Experience key={num} saveAll={saveAll} />)}
+        <div className='experience'>
+          {experienceNum.map((num) => <Experience key={num} saveAll={saveAll} />)}
+        </div>
         <button className={!saveAll ? 'gray' : 'not-gray'} onClick={() => setExperienceNum([...experienceNum, crypto.randomUUID()])}>Add New</button>
         <button className={!saveAll ? 'gray' : 'not-gray'} onClick={removeLastExperience}>Delete Previous</button>
       </div>
       <div>
         <h2>Education</h2>
-        {educationNum.map((num) => <Education key={num} saveAll={saveAll} />)}
+        <div className="education">
+          {educationNum.map((num) => <Education key={num} saveAll={saveAll} />)}
+        </div>
         <button className={!saveAll ? 'gray' : 'not-gray'} onClick={() => setEducationNum([...educationNum, crypto.randomUUID()])}>Add New</button>
         <button className={!saveAll ? 'gray' : 'not-gray'} onClick={removeLastEducation}>Delete Previous</button>
       </div>

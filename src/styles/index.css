@@ -1,9 +1,50 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 1rem 2rem;
+}
+
+input, button, textarea {
+  font: inherit;
+}
+
+h1, h2, h3 {
+    margin: 1rem 0 0.2rem;
+}
+
 .gray {
     display: none;
 }
 
+.experience, .education {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
 @media print {
-    button, h1, h2.general, h3, p.not-gray {
+    button, h1, h2.general, h2.bio, h3, p.not-gray {
         display: none;
+    }
+
+    html {
+        margin: 0;
+    }
+
+    .name {
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+
+    .company, .school {
+        font-weight: bold;
     }
 }
