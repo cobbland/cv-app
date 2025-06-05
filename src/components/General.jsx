@@ -13,7 +13,7 @@ export default function General() {
                 <h3>Email</h3>
                 <input type="email" onChange={e => setEmail(e.target.value)} value={email}/>
                 <h3>Phone</h3>
-                <input type="phone" onChange={e => setPhone(e.target.value)} value={phone}/>
+                <input type="tel" onChange={e => setPhone(e.target.value)} value={phone}/>
                 <div>
                     <button onClick={() => setEdit(false)}>Save</button>
                 </div>
@@ -23,11 +23,11 @@ export default function General() {
         return (
             <div>
                 <h3>Name</h3>
-                <p>{name}</p>
+                <p className="name">{name}</p>
                 <h3>Email</h3>
-                <p>{email}</p>
+                <p className="email">{email}</p>
                 <h3>Phone</h3>
-                <p>{phone}</p>
+                <p className="phone">{phone}</p>
                 <div>
                     <button onClick={() => setEdit(true)}>Edit</button>
                 </div>
