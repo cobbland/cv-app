@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Experience({ id }) {
+export default function Experience() {
     const [company, setCompany] = useState('');
     const [title, setTitle] = useState('');
     const [responsibilities, setResponsibilities] = useState('');
@@ -9,7 +9,7 @@ export default function Experience({ id }) {
     const [edit, setEdit] = useState(true);
     if (edit) {
         return (
-            <div key={id}>
+            <div>
                 <h3>Company</h3>
                 <input type="text" onChange={e => setCompany(e.target.value)} value={company}/>
                 <h3>Title</h3>
@@ -27,7 +27,7 @@ export default function Experience({ id }) {
         )
     } else {
         return (
-            <div key={id}>
+            <div>
                 <h3>Company</h3>
                 <p>{company}</p>
                 <h3>Title</h3>

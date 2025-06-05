@@ -31,11 +31,11 @@ export default function App() {
       <h2>Skills</h2>
       <Skills />
       <h2>Experience</h2>
-      {experienceNum.map((num) => <Experience id={num} />)}
+      {experienceNum.map((num) => <Experience key={num} />)}
       <button onClick={() => setExperienceNum([...experienceNum, crypto.randomUUID()])}>Add New</button>
       <button onClick={removeLastExperience}>Delete Previous</button>
       <h2>Education</h2>
-      {educationNum.map((num) => <Education id={num} />)}
+      {educationNum.map((num) => <Education key={num} />)}
       <button onClick={() => setEducationNum([...educationNum, crypto.randomUUID()])}>Add New</button>
       <button onClick={removeLastEducation}>Delete Previous</button>
     </div>

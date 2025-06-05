@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Education({ id }) {
+export default function Education() {
     const [school, setSchool] = useState('');
     const [area, setArea] = useState('');
     const [from, setFrom] = useState('');
@@ -8,7 +8,7 @@ export default function Education({ id }) {
     const [edit, setEdit] = useState(true);
     if (edit) {
         return (
-            <div key={id}>
+            <div>
                 <h3>School</h3>
                 <input type="text" onChange={e => setSchool(e.target.value)} value={school}/>
                 <h3>Area</h3>
@@ -24,7 +24,7 @@ export default function Education({ id }) {
         )
     } else {
         return (
-            <div key={id}>
+            <div>
                 <h3>School</h3>
                 <p>{school}</p>
                 <h3>Area</h3>
