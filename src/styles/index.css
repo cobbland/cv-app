@@ -1,10 +1,9 @@
 .gray {
-    color: lightgray;
+    display: none;
 }
 
 @media print {
-    button, h1, h2.general, h3,
-    p.gray, p.not-gray {
+    button, h1, h2.general, h3, p.not-gray {
         display: none;
     }
 }

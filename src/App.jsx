@@ -40,20 +40,20 @@ export default function App() {
       <div>
         <h2>Experience</h2>
         {experienceNum.map((num) => <Experience key={num} saveAll={saveAll} />)}
-        <button onClick={() => setExperienceNum([...experienceNum, crypto.randomUUID()])}>Add New</button>
-        <button onClick={removeLastExperience}>Delete Previous</button>
+        <button className={!saveAll ? 'gray' : 'not-gray'} onClick={() => setExperienceNum([...experienceNum, crypto.randomUUID()])}>Add New</button>
+        <button className={!saveAll ? 'gray' : 'not-gray'} onClick={removeLastExperience}>Delete Previous</button>
       </div>
       <div>
         <h2>Education</h2>
         {educationNum.map((num) => <Education key={num} saveAll={saveAll} />)}
-        <button onClick={() => setEducationNum([...educationNum, crypto.randomUUID()])}>Add New</button>
-        <button onClick={removeLastEducation}>Delete Previous</button>
+        <button className={!saveAll ? 'gray' : 'not-gray'} onClick={() => setEducationNum([...educationNum, crypto.randomUUID()])}>Add New</button>
+        <button className={!saveAll ? 'gray' : 'not-gray'} onClick={removeLastEducation}>Delete Previous</button>
       </div>
       <div>
-        <button disabled={!saveAll} onClick={() => setSaveAll(false)}> Lock </button>
-        <button disabled={saveAll} onClick={() => setSaveAll(true)}> Unlock </button>
+        <button disabled={!saveAll} onClick={() => setSaveAll(false)}> Save </button>
+        <button disabled={saveAll} onClick={() => setSaveAll(true)}> Edit </button>
         <button disabled={saveAll} onClick={window.print}>Print</button>
-        <p className={!saveAll ? 'gray' : 'not-gray'}>Lock to print.</p>
+        <p className={!saveAll ? 'gray' : 'not-gray'}>Save to print.</p>
       </div>
     </div>
   )
