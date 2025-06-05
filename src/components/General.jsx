@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-export default function General() {
+export default function General({ saveAll }) {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
-    const [edit, setEdit] = useState(true);
-    if (edit) {
+    const [edit, setEdit] = useState(saveAll);
+    if (edit && saveAll) {
         return (
-            <div>
+            <>
                 <h3>Name</h3>
                 <input type="text" onChange={e => setName(e.target.value)} value={name}/>
                 <h3>Email</h3>
@@ -17,11 +17,11 @@ export default function General() {
                 <div>
                     <button onClick={() => setEdit(false)}>Save</button>
                 </div>
-            </div>
+            </>
         )
     } else {
         return (
-            <div>
+            <>
                 <h3>Name</h3>
                 <p className="name">{name}</p>
                 <h3>Email</h3>
@@ -31,7 +31,7 @@ export default function General() {
                 <div>
                     <button onClick={() => setEdit(true)}>Edit</button>
                 </div>
-            </div>
+            </>
         )
     }
 }

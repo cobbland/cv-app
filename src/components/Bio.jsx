@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function Bio() {
+export default function Bio({ saveAll }) {
     const [bio, setBio] = useState('');
-    const [edit, setEdit] = useState(true);
+    const [edit, setEdit] = useState(saveAll);
 
-    if (edit) {
+    if (edit && saveAll) {
         return (
             <div>
                 <textarea onChange={e => setBio(e.target.value)} value={bio}/>

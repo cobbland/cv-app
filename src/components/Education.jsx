@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-export default function Education() {
+export default function Education({ saveAll }) {
     const [school, setSchool] = useState('');
     const [area, setArea] = useState('');
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
-    const [edit, setEdit] = useState(true);
-    if (edit) {
+    const [edit, setEdit] = useState(saveAll);
+    if (edit && saveAll) {
         return (
             <div>
                 <h3>School</h3>

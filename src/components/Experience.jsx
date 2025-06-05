@@ -1,13 +1,13 @@
 import { useState } from "react";
 
-export default function Experience() {
+export default function Experience({ saveAll }) {
     const [company, setCompany] = useState('');
     const [title, setTitle] = useState('');
     const [responsibilities, setResponsibilities] = useState('');
     const [from, setFrom] = useState('');
     const [to, setTo] = useState('');
-    const [edit, setEdit] = useState(true);
-    if (edit) {
+    const [edit, setEdit] = useState(saveAll);
+    if (edit && saveAll) {
         return (
             <div>
                 <h3>Company</h3>

@@ -1,10 +1,10 @@
 import { useState } from "react";
 
-export default function Skills() {
+export default function Skills({ saveAll }) {
     const [skills, setSkills] = useState('');
-    const [edit, setEdit] = useState(true);
+    const [edit, setEdit] = useState(saveAll);
 
-    if (edit) {
+    if (edit && saveAll) {
         return (
             <div>
                 <textarea onChange={e => setSkills(e.target.value)} value={skills}/>
